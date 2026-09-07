@@ -1,0 +1,12 @@
+In file included from /home/postedism/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/include/python3.13/Python.h:14,
+                 from /tmp/tmpmjfwsxb7/cuda_utils.c:9:
+/home/postedism/.local/share/uv/python/cpython-3.13.15-linux-x86_64-gnu/include/python3.13/pyconfig.h:1988:9: warning: ‘_POSIX_C_SOURCE’ redefined
+ 1988 | #define _POSIX_C_SOURCE 200809L
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:33,
+                 from /usr/include/stdlib.h:26,
+                 from /home/postedism/Desktop/kernal libraries/.runtime/lib/python3.13/site-packages/triton/backends/nvidia/include/cuda.h:56,
+                 from /tmp/tmpmjfwsxb7/cuda_utils.c:1:
+/usr/include/features.h:319:10: note: this is the location of the previous definition
+  319 | # define _POSIX_C_SOURCE        202405L
+      |          ^~~~~~~~~~~~~~~

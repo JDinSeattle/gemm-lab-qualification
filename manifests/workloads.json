@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "seed": 1729,
+  "dtype": "float16",
+  "math": "FP32 accumulation, FP16 output, TF32 disabled",
+  "atol": 0.003,
+  "rtol": 0.005,
+  "benchmark": [
+    {"id":"decode-m8", "m":8,"n":4096,"k":4096},
+    {"id":"decode-m32", "m":32,"n":4096,"k":4096},
+    {"id":"tail", "m":17,"n":257,"k":131},
+    {"id":"square", "m":512,"n":512,"k":512}
+  ],
+  "edges": [
+    {"id":"odd", "m":17,"n":31,"k":13},
+    {"id":"tile-tail", "m":129,"n":257,"k":65},
+    {"id":"empty-m", "m":0,"n":31,"k":13},
+    {"id":"empty-n", "m":17,"n":0,"k":13},
+    {"id":"empty-k", "m":17,"n":31,"k":0}
+  ],
+  "edge_patterns": ["random", "zeros", "cancellation"],
+  "layouts": ["contiguous", "strided"],
+  "special_values": "NaN and infinity are excluded and rejected by input qualification; no promise about propagation"
+}

@@ -1,0 +1,5 @@
+Generating SQLite file /home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-final-20260907/profile-decode.sqlite from /home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-final-20260907/profile-decode.nsys-rep
+Processing [/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-final-20260907/profile-decode.sqlite] with [/opt/nvidia/nsight-systems/2025.6.3/host-linux-x64/reports/cuda_gpu_kern_sum.py] to [/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-final-20260907/profile-decode_cuda_gpu_kern_sum.csv]... PROCESSED
+
+Processing [/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-final-20260907/profile-decode.sqlite] with [/opt/nvidia/nsight-systems/2025.6.3/host-linux-x64/reports/cuda_gpu_mem_time_sum.py] to [/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-final-20260907/profile-decode_cuda_gpu_mem_time_sum.csv]... PROCESSED
+

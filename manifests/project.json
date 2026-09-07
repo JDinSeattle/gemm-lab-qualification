@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "project": "A",
+  "repository": "https://github.com/JDinSeattle/gemm-lab-qualification",
+  "python": "3.13",
+  "gpu": "RTX 4090 / sm_89",
+  "cuda": "13.2",
+  "driver": "595.84"
+}

@@ -1,0 +1,23 @@
+[A] cpu-tests
+[A] native-configure
+[A] native-build
+[A] native-tests
+[A] gpu-check
+[A] gpu-memcheck
+[A] native-memcheck
+[A] benchmark
+[A] native-benchmark
+[A] cute-source
+[A] cute-check
+[A] cute-memcheck
+Traceback (most recent call last):
+  File "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/scripts/run.py", line 74, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/scripts/run.py", line 58, in main
+    run('cute-memcheck',sanitizer+[cute,'cute_qualification.py','check','--output',str(out/'cute-sanitizer-check.json')])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/scripts/run.py", line 25, in run
+    if code:raise RuntimeError(f'{label} failed with exit {code}; inspect {out/(label+".log")}')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: cute-memcheck failed with exit 99; inspect /home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/results/verified-20260907/cute-memcheck.log

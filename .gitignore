@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.deps/
+build/
+*.so
+*.o
+*.ncu-rep
+*.sqlite
+results/run-*/
+*.nsys-rep

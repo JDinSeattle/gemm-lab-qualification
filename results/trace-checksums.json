@@ -1,0 +1,5 @@
+{
+  "results/exploratory/decode-trace.nsys-rep": "91cab04fe8415e87ebd56f748afe5a5f5899b5af1734b8ac8a7f708a513a9406",
+  "results/verified-final-20260907/profile-decode.nsys-rep": "9f96759e0a2e2f7b22a17ac25c42f49f5fb434fbb1b4f9b9923729d0ccc70af8",
+  "results/verified-final-20260907/profile-tail.nsys-rep": "e624e842187031a9fb1b37928f0a29f1299169124a1b487fa8f6631cf210632d"
+}

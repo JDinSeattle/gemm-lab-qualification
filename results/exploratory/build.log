@@ -1,0 +1,23 @@
+-- The CXX compiler identification is GNU 15.2.0
+-- The CUDA compiler identification is NVIDIA 13.2.86 with host compiler GNU 15.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda-13.2/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found CUDAToolkit: /usr/local/cuda-13.2/targets/x86_64-linux/include;/usr/local/cuda-13.2/targets/x86_64-linux/include/cccl (found version "13.2.86")
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (1.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/build
+[1/2] Building CUDA object CMakeFiles/gemm_bench.dir/csrc/gemm_bench.cu.o
+[2/2] Linking CUDA executable gemm_bench
+[1/2] Building CUDA object CMakeFiles/gemm_bench.dir/csrc/gemm_bench.cu.o
+[2/2] Linking CUDA executable gemm_bench

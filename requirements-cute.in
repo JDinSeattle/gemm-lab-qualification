@@ -1,0 +1,7 @@
+torch==2.13.0
+triton==3.7.1
+numpy==2.5.3
+pytest==9.1.1
+nvidia-cutlass-dsl[cu13]==4.6.1
+cuda-python==13.2.0
+cuda-bindings==13.2.0

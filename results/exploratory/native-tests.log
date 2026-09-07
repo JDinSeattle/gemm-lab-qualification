@@ -1,0 +1,177 @@
+Test project /home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification/build
+      Start  1: gemm_bench_help
+ 1/86 Test  #1: gemm_bench_help .........................................   Passed    0.10 sec
+      Start  2: correctness_wmma_17x31x13
+ 2/86 Test  #2: correctness_wmma_17x31x13 ...............................   Passed    0.66 sec
+      Start  3: correctness_wmma_129x257x65
+ 3/86 Test  #3: correctness_wmma_129x257x65 .............................   Passed    0.52 sec
+      Start  4: correctness_wmma_127x129x131
+ 4/86 Test  #4: correctness_wmma_127x129x131 ............................   Passed    0.47 sec
+      Start  5: correctness_wmma_1x4096x4096
+ 5/86 Test  #5: correctness_wmma_1x4096x4096 ............................   Passed    0.66 sec
+      Start  6: correctness_wmma_509x4099x4103
+ 6/86 Test  #6: correctness_wmma_509x4099x4103 ..........................   Passed    0.71 sec
+      Start  7: correctness_wmma_256x256x256
+ 7/86 Test  #7: correctness_wmma_256x256x256 ............................   Passed    0.53 sec
+      Start  8: correctness_wmma_tiled_17x31x13
+ 8/86 Test  #8: correctness_wmma_tiled_17x31x13 .........................   Passed    0.54 sec
+      Start  9: correctness_wmma_tiled_129x257x65
+ 9/86 Test  #9: correctness_wmma_tiled_129x257x65 .......................   Passed    0.56 sec
+      Start 10: correctness_wmma_tiled_127x129x131
+10/86 Test #10: correctness_wmma_tiled_127x129x131 ......................   Passed    0.57 sec
+      Start 11: correctness_wmma_tiled_1x4096x4096
+11/86 Test #11: correctness_wmma_tiled_1x4096x4096 ......................   Passed    0.91 sec
+      Start 12: correctness_wmma_tiled_509x4099x4103
+12/86 Test #12: correctness_wmma_tiled_509x4099x4103 ....................   Passed    0.72 sec
+      Start 13: correctness_wmma_tiled_256x256x256
+13/86 Test #13: correctness_wmma_tiled_256x256x256 ......................   Passed    0.49 sec
+      Start 14: correctness_wmma_tiled_padded_17x31x13
+14/86 Test #14: correctness_wmma_tiled_padded_17x31x13 ..................   Passed    0.53 sec
+      Start 15: correctness_wmma_tiled_padded_129x257x65
+15/86 Test #15: correctness_wmma_tiled_padded_129x257x65 ................   Passed    0.47 sec
+      Start 16: correctness_wmma_tiled_padded_127x129x131
+16/86 Test #16: correctness_wmma_tiled_padded_127x129x131 ...............   Passed    0.50 sec
+      Start 17: correctness_wmma_tiled_padded_1x4096x4096
+17/86 Test #17: correctness_wmma_tiled_padded_1x4096x4096 ...............   Passed    0.67 sec
+      Start 18: correctness_wmma_tiled_padded_509x4099x4103
+18/86 Test #18: correctness_wmma_tiled_padded_509x4099x4103 .............   Passed    0.73 sec
+      Start 19: correctness_wmma_tiled_padded_256x256x256
+19/86 Test #19: correctness_wmma_tiled_padded_256x256x256 ...............   Passed    0.59 sec
+      Start 20: correctness_ptx_mma_17x31x13
+20/86 Test #20: correctness_ptx_mma_17x31x13 ............................   Passed    0.52 sec
+      Start 21: correctness_ptx_mma_129x257x65
+21/86 Test #21: correctness_ptx_mma_129x257x65 ..........................   Passed    0.56 sec
+      Start 22: correctness_ptx_mma_127x129x131
+22/86 Test #22: correctness_ptx_mma_127x129x131 .........................   Passed    0.47 sec
+      Start 23: correctness_ptx_mma_1x4096x4096
+23/86 Test #23: correctness_ptx_mma_1x4096x4096 .........................   Passed    0.66 sec
+      Start 24: correctness_ptx_mma_509x4099x4103
+24/86 Test #24: correctness_ptx_mma_509x4099x4103 .......................   Passed    0.76 sec
+      Start 25: correctness_ptx_mma_256x256x256
+25/86 Test #25: correctness_ptx_mma_256x256x256 .........................   Passed    0.44 sec
+      Start 26: correctness_ptx_mma_tiled_17x31x13
+26/86 Test #26: correctness_ptx_mma_tiled_17x31x13 ......................   Passed    0.54 sec
+      Start 27: correctness_ptx_mma_tiled_129x257x65
+27/86 Test #27: correctness_ptx_mma_tiled_129x257x65 ....................   Passed    0.60 sec
+      Start 28: correctness_ptx_mma_tiled_127x129x131
+28/86 Test #28: correctness_ptx_mma_tiled_127x129x131 ...................   Passed    0.63 sec
+      Start 29: correctness_ptx_mma_tiled_1x4096x4096
+29/86 Test #29: correctness_ptx_mma_tiled_1x4096x4096 ...................   Passed    0.92 sec
+      Start 30: correctness_ptx_mma_tiled_509x4099x4103
+30/86 Test #30: correctness_ptx_mma_tiled_509x4099x4103 .................   Passed    0.76 sec
+      Start 31: correctness_ptx_mma_tiled_256x256x256
+31/86 Test #31: correctness_ptx_mma_tiled_256x256x256 ...................   Passed    0.54 sec
+      Start 32: correctness_ptx_mma_pipelined_17x31x13
+32/86 Test #32: correctness_ptx_mma_pipelined_17x31x13 ..................   Passed    0.61 sec
+      Start 33: correctness_ptx_mma_pipelined_129x257x65
+33/86 Test #33: correctness_ptx_mma_pipelined_129x257x65 ................   Passed    0.50 sec
+      Start 34: correctness_ptx_mma_pipelined_127x129x131
+34/86 Test #34: correctness_ptx_mma_pipelined_127x129x131 ...............   Passed    0.47 sec
+      Start 35: correctness_ptx_mma_pipelined_1x4096x4096
+35/86 Test #35: correctness_ptx_mma_pipelined_1x4096x4096 ...............   Passed    0.76 sec
+      Start 36: correctness_ptx_mma_pipelined_509x4099x4103
+36/86 Test #36: correctness_ptx_mma_pipelined_509x4099x4103 .............   Passed    0.76 sec
+      Start 37: correctness_ptx_mma_pipelined_256x256x256
+37/86 Test #37: correctness_ptx_mma_pipelined_256x256x256 ...............   Passed    0.48 sec
+      Start 38: correctness_ptx_mma_small_17x31x13
+38/86 Test #38: correctness_ptx_mma_small_17x31x13 ......................   Passed    0.47 sec
+      Start 39: correctness_ptx_mma_small_129x257x65
+39/86 Test #39: correctness_ptx_mma_small_129x257x65 ....................   Passed    0.55 sec
+      Start 40: correctness_ptx_mma_small_127x129x131
+40/86 Test #40: correctness_ptx_mma_small_127x129x131 ...................   Passed    0.43 sec
+      Start 41: correctness_ptx_mma_small_1x4096x4096
+41/86 Test #41: correctness_ptx_mma_small_1x4096x4096 ...................   Passed    0.72 sec
+      Start 42: correctness_ptx_mma_small_509x4099x4103
+42/86 Test #42: correctness_ptx_mma_small_509x4099x4103 .................   Passed    0.74 sec
+      Start 43: correctness_ptx_mma_small_256x256x256
+43/86 Test #43: correctness_ptx_mma_small_256x256x256 ...................   Passed    0.60 sec
+      Start 44: correctness_ptx_mma_splitk_17x31x13
+44/86 Test #44: correctness_ptx_mma_splitk_17x31x13 .....................   Passed    0.69 sec
+      Start 45: correctness_ptx_mma_splitk_129x257x65
+45/86 Test #45: correctness_ptx_mma_splitk_129x257x65 ...................   Passed    0.55 sec
+      Start 46: correctness_ptx_mma_splitk_127x129x131
+46/86 Test #46: correctness_ptx_mma_splitk_127x129x131 ..................   Passed    0.50 sec
+      Start 47: correctness_ptx_mma_splitk_1x4096x4096
+47/86 Test #47: correctness_ptx_mma_splitk_1x4096x4096 ..................   Passed    0.66 sec
+      Start 48: correctness_ptx_mma_splitk_509x4099x4103
+48/86 Test #48: correctness_ptx_mma_splitk_509x4099x4103 ................   Passed    0.60 sec
+      Start 49: correctness_ptx_mma_splitk_256x256x256
+49/86 Test #49: correctness_ptx_mma_splitk_256x256x256 ..................   Passed    0.42 sec
+      Start 50: correctness_ptx_mma_small_8warp_17x31x13
+50/86 Test #50: correctness_ptx_mma_small_8warp_17x31x13 ................   Passed    0.37 sec
+      Start 51: correctness_ptx_mma_small_8warp_129x257x65
+51/86 Test #51: correctness_ptx_mma_small_8warp_129x257x65 ..............   Passed    0.40 sec
+      Start 52: correctness_ptx_mma_small_8warp_127x129x131
+52/86 Test #52: correctness_ptx_mma_small_8warp_127x129x131 .............   Passed    0.43 sec
+      Start 53: correctness_ptx_mma_small_8warp_1x4096x4096
+53/86 Test #53: correctness_ptx_mma_small_8warp_1x4096x4096 .............   Passed    0.82 sec
+      Start 54: correctness_ptx_mma_small_8warp_509x4099x4103
+54/86 Test #54: correctness_ptx_mma_small_8warp_509x4099x4103 ...........   Passed    0.61 sec
+      Start 55: correctness_ptx_mma_small_8warp_256x256x256
+55/86 Test #55: correctness_ptx_mma_small_8warp_256x256x256 .............   Passed    0.35 sec
+      Start 56: correctness_ptx_mma_pipelined_bf16_17x31x13
+56/86 Test #56: correctness_ptx_mma_pipelined_bf16_17x31x13 .............   Passed    0.42 sec
+      Start 57: correctness_ptx_mma_pipelined_bf16_129x257x65
+57/86 Test #57: correctness_ptx_mma_pipelined_bf16_129x257x65 ...........   Passed    0.36 sec
+      Start 58: correctness_ptx_mma_pipelined_bf16_127x129x131
+58/86 Test #58: correctness_ptx_mma_pipelined_bf16_127x129x131 ..........   Passed    0.31 sec
+      Start 59: correctness_ptx_mma_pipelined_bf16_1x4096x4096
+59/86 Test #59: correctness_ptx_mma_pipelined_bf16_1x4096x4096 ..........   Passed    0.44 sec
+      Start 60: correctness_ptx_mma_pipelined_bf16_509x4099x4103
+60/86 Test #60: correctness_ptx_mma_pipelined_bf16_509x4099x4103 ........   Passed    0.58 sec
+      Start 61: correctness_ptx_mma_pipelined_bf16_256x256x256
+61/86 Test #61: correctness_ptx_mma_pipelined_bf16_256x256x256 ..........   Passed    0.40 sec
+      Start 62: correctness_ptx_mma_small_bf16_17x31x13
+62/86 Test #62: correctness_ptx_mma_small_bf16_17x31x13 .................   Passed    0.39 sec
+      Start 63: correctness_ptx_mma_small_bf16_129x257x65
+63/86 Test #63: correctness_ptx_mma_small_bf16_129x257x65 ...............   Passed    0.52 sec
+      Start 64: correctness_ptx_mma_small_bf16_127x129x131
+64/86 Test #64: correctness_ptx_mma_small_bf16_127x129x131 ..............   Passed    0.55 sec
+      Start 65: correctness_ptx_mma_small_bf16_1x4096x4096
+65/86 Test #65: correctness_ptx_mma_small_bf16_1x4096x4096 ..............   Passed    0.64 sec
+      Start 66: correctness_ptx_mma_small_bf16_509x4099x4103
+66/86 Test #66: correctness_ptx_mma_small_bf16_509x4099x4103 ............   Passed    0.56 sec
+      Start 67: correctness_ptx_mma_small_bf16_256x256x256
+67/86 Test #67: correctness_ptx_mma_small_bf16_256x256x256 ..............   Passed    0.37 sec
+      Start 68: correctness_ptx_mma_small_unpadded_bf16_17x31x13
+68/86 Test #68: correctness_ptx_mma_small_unpadded_bf16_17x31x13 ........   Passed    0.32 sec
+      Start 69: correctness_ptx_mma_small_unpadded_bf16_129x257x65
+69/86 Test #69: correctness_ptx_mma_small_unpadded_bf16_129x257x65 ......   Passed    0.36 sec
+      Start 70: correctness_ptx_mma_small_unpadded_bf16_127x129x131
+70/86 Test #70: correctness_ptx_mma_small_unpadded_bf16_127x129x131 .....   Passed    0.31 sec
+      Start 71: correctness_ptx_mma_small_unpadded_bf16_1x4096x4096
+71/86 Test #71: correctness_ptx_mma_small_unpadded_bf16_1x4096x4096 .....   Passed    0.53 sec
+      Start 72: correctness_ptx_mma_small_unpadded_bf16_509x4099x4103
+72/86 Test #72: correctness_ptx_mma_small_unpadded_bf16_509x4099x4103 ...   Passed    0.63 sec
+      Start 73: correctness_ptx_mma_small_unpadded_bf16_256x256x256
+73/86 Test #73: correctness_ptx_mma_small_unpadded_bf16_256x256x256 .....   Passed    0.44 sec
+      Start 74: correctness_ptx_mma_splitk_bf16_17x31x13
+74/86 Test #74: correctness_ptx_mma_splitk_bf16_17x31x13 ................   Passed    0.40 sec
+      Start 75: correctness_ptx_mma_splitk_bf16_129x257x65
+75/86 Test #75: correctness_ptx_mma_splitk_bf16_129x257x65 ..............   Passed    0.43 sec
+      Start 76: correctness_ptx_mma_splitk_bf16_127x129x131
+76/86 Test #76: correctness_ptx_mma_splitk_bf16_127x129x131 .............   Passed    0.38 sec
+      Start 77: correctness_ptx_mma_splitk_bf16_1x4096x4096
+77/86 Test #77: correctness_ptx_mma_splitk_bf16_1x4096x4096 .............   Passed    0.58 sec
+      Start 78: correctness_ptx_mma_splitk_bf16_509x4099x4103
+78/86 Test #78: correctness_ptx_mma_splitk_bf16_509x4099x4103 ...........   Passed    0.60 sec
+      Start 79: correctness_ptx_mma_splitk_bf16_256x256x256
+79/86 Test #79: correctness_ptx_mma_splitk_bf16_256x256x256 .............   Passed    0.35 sec
+      Start 80: correctness_ptx_mma_small_8warp_bf16_17x31x13
+80/86 Test #80: correctness_ptx_mma_small_8warp_bf16_17x31x13 ...........   Passed    0.40 sec
+      Start 81: correctness_ptx_mma_small_8warp_bf16_129x257x65
+81/86 Test #81: correctness_ptx_mma_small_8warp_bf16_129x257x65 .........   Passed    0.38 sec
+      Start 82: correctness_ptx_mma_small_8warp_bf16_127x129x131
+82/86 Test #82: correctness_ptx_mma_small_8warp_bf16_127x129x131 ........   Passed    0.41 sec
+      Start 83: correctness_ptx_mma_small_8warp_bf16_1x4096x4096
+83/86 Test #83: correctness_ptx_mma_small_8warp_bf16_1x4096x4096 ........   Passed    0.60 sec
+      Start 84: correctness_ptx_mma_small_8warp_bf16_509x4099x4103
+84/86 Test #84: correctness_ptx_mma_small_8warp_bf16_509x4099x4103 ......   Passed    0.67 sec
+      Start 85: correctness_ptx_mma_small_8warp_bf16_256x256x256
+85/86 Test #85: correctness_ptx_mma_small_8warp_bf16_256x256x256 ........   Passed    0.48 sec
+      Start 86: rejects_bf16_ptx_mma
+86/86 Test #86: rejects_bf16_ptx_mma ....................................   Passed    0.17 sec
+
+100% tests passed, 0 tests failed out of 86
+
+Total Test time (real) =  45.84 sec

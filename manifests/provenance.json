@@ -1,0 +1,12 @@
+{
+  "source": "https://github.com/JDinSeattle/llm-gemm-qualification-lab",
+  "commit": "5f78fc8f94ad85452b496c74b1973c2eaaa33d90",
+  "copied": [
+    "CMakeLists.txt",
+    "csrc/gemm_bench.cu",
+    "csrc/ptx_mma.cuh",
+    "include/gemm_lab/cuda_check.hpp",
+    "python/gemm_lab/triton_kernels.py"
+  ],
+  "historical_results_imported": false
+}

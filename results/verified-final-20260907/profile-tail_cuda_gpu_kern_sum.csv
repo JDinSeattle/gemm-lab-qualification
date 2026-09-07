@@ -1,0 +1,4 @@
+Time (%),Total Time (ns),Instances,Avg (ns),Med (ns),Min (ns),Max (ns),StdDev (ns),Name
+74.3,14624,2,7312.0,7312.0,7136,7488,248.9,"void gemm_lab::ptx_mma_pipelined_kernel<__half, (int)64, (int)64, (int)32, (int)2, (int)2, (int)8, (int)8, (bool)0>(const T1 *, const T1 *, T1 *, int, int, int, float *, int)"
+14.8,2912,1,2912.0,2912.0,2912,2912,0.0,void cutlass::Kernel2<cutlass_75_wmma_tensorop_f16_s161616gemm_f16_32x32_64x1_nn_align1>(T1::Params)
+10.9,2144,1,2144.0,2144.0,2144,2144,0.0,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, __half, __half, float, __half, (bool)0, __half, __half, __half, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublasSplitKParams<T6>, const T4 *, const T10 *, T9 *, T5 *, const T6 *, const T6 *, const T11 *, const T4 *, T11 *, void *, long, T6 *, int *, T6 *, T6 *, const T6 *, const T6 *, const T6 *, const T6 *, const T6 *)"

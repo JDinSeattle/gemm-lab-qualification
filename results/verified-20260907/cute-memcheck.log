@@ -1,0 +1,1380 @@
+========= COMPUTE-SANITIZER
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xd6ed] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xd6ed] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf342] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf342] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf368] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf368] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf38e] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf38e] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf3b4] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf3b4] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf3da] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf3da] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf400] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf400] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf426] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf426] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf44c] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf44c] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf472] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf472] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf498] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf498] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf4be] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf4be] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= CUDA API Error: cudaVersion argument (13030) exceeds the driver version (13020)
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf4e4] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= Program hit CUDA_ERROR_INVALID_VALUE (error 1) due to "invalid argument" on CUDA API call to cuGetProcAddress_v2.
+=========     Saved host backtrace up to driver entry point at error
+=========         Host Frame:  [0xf4e4] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x26724] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x149b9] in cydriver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame:  [0x4252c2] in driver.cpython-313-x86_64-linux-gnu.so
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1421015] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142485b] in python
+=========         Host Frame: _PyObject_Call_Prepend [0x14ed7b2] in python
+=========         Host Frame: slot_tp_call [0x14ed6f5] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x142bca3] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: builtin___import__ [0x143db1c] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: builtin_exec [0x14aa19a] in python
+=========         Host Frame: cfunction_vectorcall_FASTCALL_KEYWORDS.llvm.9367366447247337284 [0x1404e54] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14248c3] in python
+=========         Host Frame: object_vacall.llvm.9552677322247753602 [0x1474ad1] in python
+=========         Host Frame: PyObject_CallMethodObjArgs [0x1474929] in python
+=========         Host Frame: PyImport_ImportModuleLevelObject [0x143dee4] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x14267d1] in python
+=========         Host Frame: slot_tp_init [0x14171c8] in python
+=========         Host Frame: type_call [0x1403c8a] in python
+=========         Host Frame: _PyEval_EvalFrameDefault [0x1420e8c] in python
+=========         Host Frame: PyEval_EvalCode [0x14a9be7] in python
+=========         Host Frame: run_eval_code_obj [0x14cc32a] in python
+=========         Host Frame: run_mod.llvm.3818922755909802511 [0x14cc21c] in python
+=========         Host Frame: _PyRun_File [0x162345b] in python
+=========         Host Frame: _PyRun_SimpleFile [0x1622680] in python
+=========         Host Frame: _PyRun_AnyFile [0x1622189] in python
+=========         Host Frame: pymain_run_file_obj [0x16220b6] in python
+=========         Host Frame: pymain_run_file [0x1621f9d] in python
+=========         Host Frame: Py_RunMain [0x155a4db] in python
+=========         Host Frame: pymain_main.llvm.9033154338732943700 [0x155a174] in python
+=========         Host Frame: main [0x1559f85] in python
+========= 
+========= ERROR SUMMARY: 26 errors
