@@ -1,0 +1,10 @@
+{
+  "kind": "local_cpu_fault_reproduction",
+  "python": "3.14.4 (main, Jun 18 2026, 14:25:02) [GCC 15.2.0]",
+  "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.43",
+  "method": "same subprocess.run(timeout) boundary as original scripts/run.py; grandchild writes after direct-child timeout",
+  "timeout_seconds": 0.15,
+  "grandchild_survived_timeout": true,
+  "baseline_runner_sha256": "4fff5ac535d28f856c1983a7df12f305c7fda68684e9e31cf23f7f53f25bb729",
+  "elapsed_seconds": 0.9528560280014062
+}

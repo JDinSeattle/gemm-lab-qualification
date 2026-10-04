@@ -10,6 +10,7 @@ import platform
 import statistics
 import subprocess
 import sys
+import tempfile
 from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parent
@@ -46,9 +47,18 @@ def environment():
 
 def save(path, data):
     path=Path(path); path.parent.mkdir(parents=True,exist_ok=True)
-    tmp=path.with_suffix(path.suffix+'.tmp')
-    tmp.write_text(json.dumps(data,indent=2,sort_keys=True,allow_nan=False)+'\n')
-    os.replace(tmp,path)
+    # Serialize first: invalid evidence must not damage an existing target.
+    payload=json.dumps(data,indent=2,sort_keys=True,allow_nan=False)+'\n'
+    fd,tmp=tempfile.mkstemp(prefix='.'+path.name+'.',suffix='.tmp',dir=path.parent)
+    try:
+        with os.fdopen(fd,'w') as stream:
+            stream.write(payload);stream.flush();os.fsync(stream.fileno())
+        os.replace(tmp,path)
+        directory=os.open(path.parent,os.O_RDONLY|os.O_DIRECTORY)
+        try:os.fsync(directory)
+        finally:os.close(directory)
+    finally:
+        if os.path.exists(tmp):os.unlink(tmp)
 
 def stats(values):
     if not values or any(not math.isfinite(v) or v < 0 for v in values):

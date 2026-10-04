@@ -1,3 +1,5 @@
+> Historical source snapshot. For the current runner update, see [September 7 verification](VERIFICATION_2026-09-07.md).
+
 # Measured qualification report
 
 Run: `verified-final-20260907`. Execution status: **passed**.

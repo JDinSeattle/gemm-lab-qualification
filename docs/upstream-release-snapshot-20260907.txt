@@ -1,0 +1,271 @@
+{
+  "retrieved_at": "2026-09-07",
+  "repositories": [
+    {
+      "repo": "NVIDIA/cutlass",
+      "archived": false,
+      "pushed_at": "2026-09-03T01:26:22Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "v4.8.0dev",
+          "published_at": "2026-08-27T07:28:38Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cutlass/releases/tag/v4.8.0dev"
+        },
+        {
+          "tag_name": "v4.7.1",
+          "published_at": "2026-08-26T09:26:16Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cutlass/releases/tag/v4.7.1"
+        },
+        {
+          "tag_name": "v4.6.3",
+          "published_at": "2026-08-26T09:13:20Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cutlass/releases/tag/v4.6.3"
+        },
+        {
+          "tag_name": "v4.7.0",
+          "published_at": "2026-08-13T09:43:47Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cutlass/releases/tag/v4.7.0"
+        },
+        {
+          "tag_name": "v4.6.2",
+          "published_at": "2026-08-08T12:30:39Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cutlass/releases/tag/v4.6.2"
+        }
+      ]
+    },
+    {
+      "repo": "NVIDIA/cccl",
+      "archived": false,
+      "pushed_at": "2026-09-07T22:33:12Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "v3.4.2",
+          "published_at": "2026-08-05T18:54:34Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cccl/releases/tag/v3.4.2"
+        },
+        {
+          "tag_name": "v3.4.1",
+          "published_at": "2026-08-05T18:54:15Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cccl/releases/tag/v3.4.1"
+        },
+        {
+          "tag_name": "python-1.1.1",
+          "published_at": "2026-07-16T14:41:11Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cccl/releases/tag/python-1.1.1"
+        },
+        {
+          "tag_name": "python-1.1.0",
+          "published_at": "2026-07-09T22:58:44Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cccl/releases/tag/python-1.1.0"
+        },
+        {
+          "tag_name": "v3.4.0",
+          "published_at": "2026-07-16T15:15:43Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cccl/releases/tag/v3.4.0"
+        }
+      ]
+    },
+    {
+      "repo": "NVIDIA/cudf",
+      "archived": false,
+      "pushed_at": "2026-09-07T21:06:31Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "v26.08.01",
+          "published_at": "2026-08-25T19:57:28Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cudf/releases/tag/v26.08.01"
+        },
+        {
+          "tag_name": "v26.08.00",
+          "published_at": "2026-08-05T18:59:56Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cudf/releases/tag/v26.08.00"
+        },
+        {
+          "tag_name": "v26.06.01",
+          "published_at": "2026-06-03T22:04:42Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cudf/releases/tag/v26.06.01"
+        },
+        {
+          "tag_name": "v26.06.00",
+          "published_at": "2026-06-03T18:53:23Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cudf/releases/tag/v26.06.00"
+        },
+        {
+          "tag_name": "v26.04.00",
+          "published_at": "2026-04-08T15:58:12Z",
+          "prerelease": false,
+          "html_url": "https://github.com/NVIDIA/cudf/releases/tag/v26.04.00"
+        }
+      ]
+    },
+    {
+      "repo": "flashinfer-ai/flashinfer",
+      "archived": false,
+      "pushed_at": "2026-09-07T11:36:09Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "v0.6.18.post1",
+          "published_at": "2026-09-05T03:19:53Z",
+          "prerelease": false,
+          "html_url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/v0.6.18.post1"
+        },
+        {
+          "tag_name": "v0.6.18",
+          "published_at": "2026-08-29T02:01:33Z",
+          "prerelease": false,
+          "html_url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/v0.6.18"
+        },
+        {
+          "tag_name": "nightly-v0.6.18-20260819",
+          "published_at": "2026-08-19T03:55:09Z",
+          "prerelease": true,
+          "html_url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/nightly-v0.6.18-20260819"
+        },
+        {
+          "tag_name": "nightly-v0.6.18-20260818",
+          "published_at": "2026-08-18T05:59:09Z",
+          "prerelease": true,
+          "html_url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/nightly-v0.6.18-20260818"
+        },
+        {
+          "tag_name": "nightly-v0.6.18-20260817",
+          "published_at": "2026-08-17T03:23:59Z",
+          "prerelease": true,
+          "html_url": "https://github.com/flashinfer-ai/flashinfer/releases/tag/nightly-v0.6.18-20260817"
+        }
+      ]
+    },
+    {
+      "repo": "pytorch/pytorch",
+      "archived": false,
+      "pushed_at": "2026-09-07T22:39:10Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "v2.14.0",
+          "published_at": "2026-09-02T17:40:10Z",
+          "prerelease": false,
+          "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.14.0"
+        },
+        {
+          "tag_name": "v2.13.0",
+          "published_at": "2026-07-08T17:39:58Z",
+          "prerelease": false,
+          "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.13.0"
+        },
+        {
+          "tag_name": "v2.12.1",
+          "published_at": "2026-06-18T00:41:17Z",
+          "prerelease": false,
+          "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.12.1"
+        },
+        {
+          "tag_name": "v2.12.0",
+          "published_at": "2026-05-13T17:38:06Z",
+          "prerelease": false,
+          "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.12.0"
+        },
+        {
+          "tag_name": "v2.11.0",
+          "published_at": "2026-03-23T18:38:28Z",
+          "prerelease": false,
+          "html_url": "https://github.com/pytorch/pytorch/releases/tag/v2.11.0"
+        }
+      ]
+    },
+    {
+      "repo": "triton-lang/triton",
+      "archived": false,
+      "pushed_at": "2026-09-07T20:48:30Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "v3.8.0",
+          "published_at": "2026-08-28T18:25:56Z",
+          "prerelease": false,
+          "html_url": "https://github.com/triton-lang/triton/releases/tag/v3.8.0"
+        },
+        {
+          "tag_name": "v3.7.1",
+          "published_at": "2026-06-18T14:38:51Z",
+          "prerelease": false,
+          "html_url": "https://github.com/triton-lang/triton/releases/tag/v3.7.1"
+        },
+        {
+          "tag_name": "v3.7.0",
+          "published_at": "2026-05-07T22:19:06Z",
+          "prerelease": false,
+          "html_url": "https://github.com/triton-lang/triton/releases/tag/v3.7.0"
+        },
+        {
+          "tag_name": "v3.6.0",
+          "published_at": "2026-01-21T23:27:22Z",
+          "prerelease": false,
+          "html_url": "https://github.com/triton-lang/triton/releases/tag/v3.6.0"
+        },
+        {
+          "tag_name": "v3.5.1",
+          "published_at": "2025-11-12T22:45:12Z",
+          "prerelease": false,
+          "html_url": "https://github.com/triton-lang/triton/releases/tag/v3.5.1"
+        }
+      ]
+    },
+    {
+      "repo": "apache/arrow",
+      "archived": false,
+      "pushed_at": "2026-09-07T16:32:36Z",
+      "default_branch": "main",
+      "releases": [
+        {
+          "tag_name": "apache-arrow-25.0.1",
+          "published_at": "2026-08-10T06:47:36Z",
+          "prerelease": false,
+          "html_url": "https://github.com/apache/arrow/releases/tag/apache-arrow-25.0.1"
+        },
+        {
+          "tag_name": "apache-arrow-25.0.1-rc1",
+          "published_at": "2026-08-06T07:21:40Z",
+          "prerelease": true,
+          "html_url": "https://github.com/apache/arrow/releases/tag/apache-arrow-25.0.1-rc1"
+        },
+        {
+          "tag_name": "apache-arrow-25.0.1-rc0",
+          "published_at": "2026-08-05T16:35:33Z",
+          "prerelease": true,
+          "html_url": "https://github.com/apache/arrow/releases/tag/apache-arrow-25.0.1-rc0"
+        },
+        {
+          "tag_name": "apache-arrow-25.0.0",
+          "published_at": "2026-07-10T07:12:10Z",
+          "prerelease": false,
+          "html_url": "https://github.com/apache/arrow/releases/tag/apache-arrow-25.0.0"
+        },
+        {
+          "tag_name": "apache-arrow-25.0.0-rc1",
+          "published_at": "2026-07-03T22:13:29Z",
+          "prerelease": true,
+          "html_url": "https://github.com/apache/arrow/releases/tag/apache-arrow-25.0.0-rc1"
+        }
+      ]
+    }
+  ]
+}

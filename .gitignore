@@ -9,3 +9,6 @@ build/
 *.sqlite
 results/run-*/
 *.nsys-rep
+
+# Local validation environments
+/.deps

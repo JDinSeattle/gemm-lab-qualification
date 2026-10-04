@@ -25,9 +25,24 @@ def reference(a,b):
     if a.ndim!=2 or b.ndim!=2 or a.shape[1]!=b.shape[0]:raise ValueError('shape contract')
     if a.dtype!=torch.float16 or b.dtype!=a.dtype:raise ValueError('v1 is FP16 only')
     if not torch.isfinite(a).all() or not torch.isfinite(b).all():raise ValueError('finite input contract')
-    out=a.double()@b.double()
+    out=a.detach().cpu().double()@b.detach().cpu().double()
+    crosscheck_reference(a,b,out)
     if (out.abs()>65504).any():raise ValueError('FP16 output overflow excluded')
     return out
+
+def crosscheck_reference(a,b,expected,samples=64):
+    """Cross-check CPU matmul with scalar Python accumulation at fixed dots."""
+    m,k=a.shape;_,n=b.shape
+    if not m or not n:return
+    aa=a.detach().cpu();bb=b.detach().cpu()
+    count=min(samples,m*n)
+    # Include both endpoints and spread checks through all rows and columns.
+    indices=[0] if count==1 else [(j*(m*n-1))//(count-1) for j in range(count)]
+    for index in indices:
+        row,col=divmod(index,n)
+        scalar=math.fsum(float(aa[row,t])*float(bb[t,col]) for t in range(k))
+        if not math.isclose(float(expected[row,col]),scalar,rel_tol=1e-12,abs_tol=1e-10):
+            raise AssertionError(f'independent scalar reference mismatch at ({row},{col})')
 
 def compare(actual,expected,atol=None,rtol=None):
     atol=MANIFEST['atol'] if atol is None else atol;rtol=MANIFEST['rtol'] if rtol is None else rtol

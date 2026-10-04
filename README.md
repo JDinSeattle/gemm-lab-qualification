@@ -1,44 +1,57 @@
 # GEMM Lab Qualification
 
-[![CPU contracts](https://github.com/JDinSeattle/gemm-lab-qualification/actions/workflows/ci.yml/badge.svg)](https://github.com/JDinSeattle/gemm-lab-qualification/actions/workflows/ci.yml)
+A single-GPU numerical qualification lab for FP16 GEMM and bias+SiLU fragments, with independent CPU references, explicit unsupported-layout fallbacks, paired timing, and isolated experiment ownership.
 
-A reproducible GPU performance-engineering study of small-batch linear projections: numerical boundaries, native build qualification, measurement provenance, and whether kernel behavior survives model-fragment integration.
+## Confirmed qualification results
 
-**The result is a decision, not a leaderboard.** Split-K substantially improves the inherited unsplit PTX kernel on decode shapes, but the current measurements do not establish a cuBLASLt win. The repository retains slower cases, unsupported CUTLASS layouts, and failed environment attempts. [Measured results and raw evidence](docs/RESULTS.md).
+These are the user-confirmed results from a separate cloud test run, recorded in the experience bank. The device, workload, timing round, and counting boundaries below remain part of each result. They are distinct from the CPU checks performed in this checkout; cloud-hosted testing does not imply production deployment.
 
-## Reproduce
+- Qualified FP16 GEMM and bias+SiLU linear fragments on a single RTX 4090 24 GB (sm_89, CUDA 13.2, Python 3.13, torch 2.13.0, Triton 3.7.1, CuTe DSL 4.6.1) across M=1/8/32/128 with N=K=4096, seed=7 and uniform inputs in [-0.5,0.5], running correctness and sanitizer checks before 20 warmups and 31 randomized AB/BA CUDA-event pairs with data resident on GPU; the 76 GPU comparison records and 86 native CUDA tests are retained together with the slower paths and fallbacks.
 
-On Linux with a supported NVIDIA GPU, CUDA toolkit/Compute Sanitizer/Nsight Systems, CMake, Ninja, Git and [uv](https://docs.astral.sh/uv/):
+- Built an independent numerical gate at M=32, N=K=4096: pre-quantized FP16 inputs, a full CPU FP64 output reference, 64 dots cross-checked with independent scalar accumulation, a tolerance of abs <= 0.02 + 0.002 x |reference|, and poison-padding plus output-canary checks; 8 additional boundary probes (zero M, zero K, tail N, tail K and 4 strided inputs) stayed separate from the historical 76 records.
+
+- Reported no cuBLASLt win at M=32, N=K=4096: p50 was 18.0 μs for cuBLASLt, 20.7 μs for Triton and 18.5 μs for CuTe, and the same-round reference/candidate values were 0.870 and 0.973; fused bias/SiLU is only compared against an equal-semantics GEMM+bias+SiLU baseline, never a bare GEMM timing.
+
+- Kept unsupported layouts explicit: the aligned CuTe path accepts only selected K/N alignment while strided and empty inputs take a reported explicit fallback, and the sm_89 path does not use TMA or WGMMA.
+
+- Hardened experiment execution: a hung child that spawned a cooperative worker was terminated as a whole process group after timeout, leaving only a failure receipt; atomic run-directory admission let only one of two publishers claim a run ID; and an flock-based GPU lock covered the entire qualification stage, while the 16 shared process/file regression cases are 16 behaviors across four projects - each project reports 16 passed, but that is not 64 independent items and the 57 CPU tests already include this project's 16.
+
+## Implementation and reproduction
+
+| Contract | Implementation |
+|---|---|
+| CPU FP64 and scalar-dot reference | [qualification.py](qualification.py) |
+| Native and Triton operators | [csrc](csrc) |
+| Pinned CuTe adapter | [cute_adapter.py](cute_adapter.py) |
+| Bounded execution and evidence admission | [execution.py](execution.py) |
+
+Run each experiment into a fresh output directory to preserve earlier evidence.
 
 ```bash
-bash scripts/reproduce.sh
+python3 -m pip install -r requirements.lock
+python3 scripts/run.py --cpu-only --output results/my-cpu-run
+# Requires the pinned sm_89 GPU/native/CuTe environment:
+python3 scripts/run.py --output results/my-gpu-run
 ```
 
-This installs locked Python dependencies in `/tmp/gemm-lab-qualification-venv` and a separate CUTLASS 4.6.1 environment. The default native architecture is sm_89; use `CUDA_ARCH` for another build, which still requires new qualification. Run directories are immutable and printed at completion. Generate the readable report with:
+Regression entry points: [tests/test_contract.py](tests/test_contract.py), [tests/test_execution.py](tests/test_execution.py), [tests/test_evidence.py](tests/test_evidence.py).
 
-```bash
-python scripts/summarize.py results/<run-directory>
-```
+## Scope and evidence
 
-For existing matching environments, set `LAB_PYTHON` and `CUTE_PYTHON`. CPU-only checks: `python scripts/run.py --cpu-only` after installing PyTorch, NumPy and pytest. CPU CI does not assert GPU success.
+Historical 76 GPU records stay separate from the eight new boundary probes and the external shape-specific timing. The local scalar cross-check validates up to 64 output dots without GPU dispatch.
 
-## What is implemented
+- No cuBLASLt win is established; the 18.0, 20.7 and 18.5 μs p50 values are for one shape (M=32, N=K=4096) and must not be generalized or cherry-picked as a leaderboard result.
 
-- FP64 full-output oracle with scalar cross-checks, a versioned manifest, 76 GPU comparisons, strided fallback, empty dimensions, poisoned storage and mutation tests.
-- Native CUDA/PTX/WMMA/Split-K plus cuBLASLt; 86 native CTest cases. Reused kernels are explicitly attributed to the pinned original GEMM Lab.
-- Triton matmul and fused bias/SiLU, and a separately pinned, rebuilt CUTLASS CuTe adapter.
-- Correctness gates bound to source digests, package versions, GPU identity and driver; failed gates prevent timing.
-- Raw CUDA events, shuffled execution, allocation/transfer and host-to-host timings, Compute Sanitizer logs, and Nsight CUDA timelines.
+- CuTe only accepts selected K/N alignment; strided and empty inputs use an explicit fallback and the dispatch path is reported, and the sm_89 path does not use TMA or WGMMA.
 
-```mermaid
-flowchart LR
-  M[Versioned workloads] --> R[Independent numerical reference]
-  R --> G[Correctness and memory-safety gates]
-  G --> B[Separate benchmark processes]
-  B --> P[Kernel timeline and fragment comparison]
-  P --> D[Documented dispatch decision]
-```
+- The FP64 oracle is CPU FP64 with an independent scalar dot cross-check, chosen so the candidate and the oracle do not share one GPU dispatch defect; it is not evidence of whole-model accuracy.
 
-Read the [contract](docs/contract.md), [registered hypotheses](docs/hypotheses.md), [results](docs/RESULTS.md), and [interview evidence](docs/INTERVIEW.md). Hardware counters are restricted on this host; the report distinguishes actual CUDA timeline evidence from unconfirmed occupancy/bandwidth hypotheses. No serving-scale or cross-architecture performance claim is made.
+- The 16 process/file tests exist across four projects: each project can report 16 passed, but that is 16 behaviors, not 64 independent items, and the 57 CPU tests already include this project's 16.
 
-License: MIT for this lab; inherited source attribution is in [provenance](manifests/provenance.json) and [upstream license](LICENSE.upstream). CUTLASS is downloaded separately under its own license. Historical performance records are not reused as current evidence.
+- Split-K is not automatically faster at small batches: partial-sum write-back, merge and extra launch are included in the timing at the same output precision; with K=4096 the extra merge can eat the gain, and any merge that changes summation order requires the full numerical gate again.
+
+- The qualification overlaps the separate LLM GEMM lab: inherited kernels keep their attribution, only one entry per job should be selected, and the shared foundation must not be counted as two independent optimizations.
+
+- This is a local single-GPU lab on synthetic inputs: the 8 new boundary probes are not mixed into the historical 76 records, and no cloud, production or whole-model performance claim is made.
+
+The [previous README](README.historical.md) preserves earlier setup details, design discussion, and historical measurements. Its older counts, splits, versions, and timing cohorts must not be mixed with the confirmed round above. [Result provenance](docs/experience-bank-results.json) retains the confirmed bullet text; [checkout validation](docs/checkout-validation.md) records what was actually rerun here.

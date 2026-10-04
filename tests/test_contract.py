@@ -31,3 +31,14 @@ def test_statistics_and_fallback():
     assert stats([1,2,3])['p50_ms']==2
     with pytest.raises(ValueError):stats([])
     a,b=inputs({'m':3,'n':4,'k':5},layout='strided');assert path(a,b)=='torch-fallback'
+
+
+def test_independent_scalar_crosscheck_rejects_corrupt_fp64_reference():
+    from qualification import crosscheck_reference
+    a=torch.tensor([[1.,-2.],[3.,4.]],dtype=torch.float16)
+    b=torch.tensor([[2.,5.],[-1.,6.]],dtype=torch.float16)
+    expected=a.double()@b.double()
+    crosscheck_reference(a,b,expected)
+    expected[-1,-1]+=1
+    with pytest.raises(AssertionError,match='scalar reference mismatch'):
+        crosscheck_reference(a,b,expected)

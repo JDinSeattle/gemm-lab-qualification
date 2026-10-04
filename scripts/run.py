@@ -1,36 +1,33 @@
-"""Auditable reproduction driver. Every child has a log and recorded exit status."""
+"""Auditable reproduction driver with bounded child groups and exclusive runs."""
 from __future__ import annotations
-import argparse,json,os,subprocess,sys,time
+import argparse,json,os,sys,uuid
 from datetime import datetime,timezone
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
-from evidence import ROOT,save,environment
+from evidence import ROOT,environment
+from execution import Execution
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--cpu-only',action='store_true');p.add_argument('--output')
-    p.add_argument('--samples',type=int,default=31);args=p.parse_args()
+    p.add_argument('--samples',type=int,default=31)
+    p.add_argument('--step-timeout',type=float,default=900,help='maximum seconds per stage')
+    p.add_argument('--termination-grace',type=float,default=1,help='seconds between TERM and KILL')
+    p.add_argument('--resource-lock',help='shared lock path; all cooperating GPU runs must use the same path')
+    args=p.parse_args()
     if args.samples<3:raise ValueError('at least three timing samples required')
-    out=Path(args.output).resolve() if args.output else ROOT/'results'/datetime.now(timezone.utc).strftime('run-%Y%m%dT%H%M%SZ')
-    out.mkdir(parents=True,exist_ok=True)
-    if (out/'execution.json').exists():raise FileExistsError('use a new evidence directory; prior executions are immutable')
-    project=json.loads((ROOT/'manifests/project.json').read_text())['project'];steps=[];py=sys.executable
-    def run(label,command,timeout=900):
-        print(f'[{project}] {label}',flush=True);started=time.monotonic()
-        with (out/(label+'.log')).open('w') as log:
-            try:result=subprocess.run(command,cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,timeout=timeout);code=result.returncode
-            except subprocess.TimeoutExpired:code=124
-            except OSError as exc:log.write(str(exc));code=127
-        steps.append({'step':label,'argv':command,'returncode':code,'elapsed_s':time.monotonic()-started})
-        save(out/'execution.json',{'status':'running' if code==0 else 'failed','steps':steps,'environment':environment()})
-        if code:raise RuntimeError(f'{label} failed with exit {code}; inspect {out/(label+".log")}')
-    try:
+    out=Path(args.output).resolve() if args.output else ROOT/'results'/(datetime.now(timezone.utc).strftime('run-%Y%m%dT%H%M%SZ')+'-'+uuid.uuid4().hex[:8])
+    project=json.loads((ROOT/'manifests/project.json').read_text())['project'];py=sys.executable
+    with Execution(out,project,environment,cpu_only=args.cpu_only,step_timeout=args.step_timeout,
+                   grace=args.termination_grace,lock_path=args.resource_lock) as execution:
+        def run(label,command,timeout=900):
+            execution.run(label,command,cwd=ROOT,timeout=timeout)
         run('cpu-tests',[py,'-m','pytest','-q','--junitxml='+str(out/'cpu.xml')])
         if project=='B':
             (ROOT/'build').mkdir(exist_ok=True)
             run('cpu-build',['g++','-std=c++17','-O1','-g','-fsanitize=address,undefined','-fno-omit-frame-pointer','-Wall','-Wextra','-Werror','-Iinclude','tests/oracle_test.cpp','-o','build/oracle_sanitized'])
             run('cpu-sanitizer',['./build/oracle_sanitized'])
         if args.cpu_only:
-            save(out/'execution.json',{'status':'cpu_passed','steps':steps,'environment':environment()});return
+            return
         if project=='A':
             run('native-configure',['cmake','-S','.','-B','build','-G','Ninja','-DCMAKE_BUILD_TYPE=Release','-DCMAKE_CUDA_ARCHITECTURES='+os.getenv('CUDA_ARCH','89')])
             run('native-build',['cmake','--build','build','-j','4'])
@@ -67,8 +64,5 @@ def main():
         if project=='D':
             run('profile',['nsys','profile','--trace=cuda,nvtx','--sample=none','--cpuctxsw=none','--force-overwrite=true','-o',str(out/'profile'),py,'qualification.py','profile','--output',str(out/'profile.json')])
             run('profile-stats',['nsys','stats','--report','cuda_gpu_kern_sum,cuda_gpu_mem_time_sum,nvtx_sum','--format','csv','--output',str(out/'profile'),str(out/'profile.nsys-rep')])
-        save(out/'execution.json',{'status':'passed','steps':steps,'environment':environment()})
-        print(str(out),flush=True)
-    except BaseException:
-        save(out/'execution.json',{'status':'failed','steps':steps,'environment':environment()});raise
+    print(str(out),flush=True)
 if __name__=='__main__':main()

@@ -1,0 +1,427 @@
+{
+  "project": "A",
+  "status": "passed",
+  "verified_at": "2026-09-07T22:53:45.314904+00:00",
+  "base_commit": "0962ddf58862b2f94a6b4096ec94fcd82b4f72a4",
+  "source_digest": "664955f2a530fe4983edc181798c90563a5f3a4adc1a7a3c4cff27086bca56b2",
+  "source_files": {
+    "CMakeLists.txt": "46e17179dcf2c28b381b5ec31bcaa59881289aa1924955eaa8106c0bfc1b6cad",
+    "csrc/gemm_bench.cu": "3b35c1abe77ffe298698530798685a8ca85fcac552027d2cb6b4b378ff678ce9",
+    "csrc/ptx_mma.cuh": "4f44041ac2078a158f2ebd333bda4a294cd7a3c918cb279726cc2402fd53ccad",
+    "cute_adapter.py": "c7ec8cb1f091efb2fc86f9a83983f240494b02f36a6d331ebf035518a94941ca",
+    "cute_qualification.py": "fd7cc5f0deae3dcd388d99baee05470ec5575c032fd8fbf26e04bbd869c10e82",
+    "evidence.py": "db3712f5c92b789063d5891f848ab5b648c123304b9ea2701dd23457364fbb1f",
+    "execution.py": "3ae279940fb3c08ed4a06f9101e875e09e72a6aca69e51f16c0f3f31e882c507",
+    "include/gemm_lab/cuda_check.hpp": "4ab39619a6ce80f95cec6f5d3d338e249f9e88418805086af03344e8c63e2365",
+    "kernels.py": "1d78b5065453ade6e37bcb764fae9635d936b15918c6f049a2c6be21ef28b75d",
+    "manifests/project.json": "4a8ab5b0e4085ac393807d0c3884f7e6cbeb596dcfabdff20c1263eb44d1f6f5",
+    "manifests/provenance.json": "e0e6247b0d15e62dead31a0bf745f90d7acc40b0d4b0babdf53de27f55d07a7d",
+    "manifests/workloads.json": "35c2585f270c5a3e9fc7d9b1f5a54a5c78614c83e90ffb8d2f0d11feb580aeb2",
+    "native_suite.py": "8b6b2abd787e9d33b0f1863a3c9168ce34f6658040ef716c748f50cd68e667fd",
+    "qualification.py": "0493ac8a417dff0acd4cbb4b5833170502c5f1a3ff6493214efd4b972ffd8986",
+    "requirements-cute.lock": "b892248663aa0a1b4b841f2d65fe50a32202bd553c47600346b6cb0097844a6d",
+    "requirements.lock": "40c03ec548805209efb87173bde04c5bff82b46b8ccbe690af767ff12b39779d",
+    "scripts/reproduce.sh": "cf5677e46636579dad8cba39291df7f478854effaa02647694525c1d31c67fc5",
+    "scripts/run.py": "db902c95550929cf869ca0e8826ab91bc509132adfd66299f3bed241b696a0e2",
+    "scripts/setup_cute.sh": "25f176d26d372d5c7c7cc03c704fe5bbc652e981145d3dae7d8989a07b4dabd3",
+    "scripts/summarize.py": "879efdd5cc00b534ddb78bcc5f08c75dfa120fbf2785bb3cf43d2b0365564e7d",
+    "tests/test_contract.py": "ce5a2453fbe6066517e8297259c1ef309cf1bb32cf1223158e33c363dabda566",
+    "tests/test_evidence.py": "708ffbca5ab111b03109cf196ff96e9a0ba2c1a968bdee30d6ddd43bf4d138b2",
+    "tests/test_execution.py": "491a1d29627dfbf0a9c6f449faf1ab9a297988f444873d5689a81f896f0cdb2f"
+  },
+  "environment": {
+    "mode": "local_physical_gpu_plus_real_cpu_process_fault_tests",
+    "os": "Linux-7.0.0-29-generic-x86_64-with-glibc2.43",
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13900K",
+    "logical_cpus": 32,
+    "memory_total_kib": 129209084,
+    "python": "3.13.15 (main, Aug  7 2026, 02:25:50) [Clang 22.1.3 ]",
+    "packages": {
+      "cuda-bindings": "13.2.0",
+      "cuda-python": "13.2.0",
+      "cupy-cuda13x": "14.2.0",
+      "flashinfer-python": "0.6.18.post1",
+      "numpy": "2.5.3",
+      "nvidia-cuda-runtime": "13.0.96",
+      "nvidia-cutlass-dsl": "4.7.1",
+      "pyarrow": "25.0.1",
+      "pylibcudf-cu13": "26.8.1",
+      "pytest": "9.1.1",
+      "rmm-cu13": "26.8.0",
+      "torch": "2.13.0",
+      "triton": "3.7.1"
+    },
+    "gpu": {
+      "argv": [
+        "nvidia-smi",
+        "--query-gpu=name,uuid,driver_version,compute_cap,pstate,temperature.gpu,clocks.sm,clocks.mem,power.draw,power.limit,memory.total,memory.used",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "name, uuid, driver_version, compute_cap, pstate, temperature.gpu, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], power.limit [W], memory.total [MiB], memory.used [MiB]\nNVIDIA GeForce RTX 4090, GPU-048ba00a-2056-d3c0-6309-91c78ab69d63, 595.84, 8.9, P3, 46, 780 MHz, 5001 MHz, 39.78 W, 450.00 W, 24564 MiB, 3371 MiB\n"
+    },
+    "nvcc": {
+      "argv": [
+        "nvcc",
+        "--version"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Fri_May_08_10:53:34_AM_PDT_2026\nCuda compilation tools, release 13.2, V13.2.86\nBuild cuda_13.2.r13.2/compiler.37953736_0\n"
+    },
+    "topology": "one local RTX 4090; cooperating labs serialized; shared display; unlocked clocks"
+  },
+  "tests": {
+    "pytest_passed": 57,
+    "pytest_failed": 0,
+    "pytest_skipped": 0,
+    "runner_behavior_cases": 16,
+    "gpu_records": 76,
+    "native_ctest_passed": 86
+  },
+  "commands": [
+    {
+      "argv": [
+        "/tmp/kernels-qualification-env/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=/tmp/kernels-refresh-20260907/A-gpu/cpu.xml"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "cmake",
+        "-S",
+        ".",
+        "-B",
+        "build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_CUDA_ARCHITECTURES=89"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "cmake",
+        "--build",
+        "build",
+        "-j",
+        "4"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "ctest",
+        "--test-dir",
+        "build",
+        "--output-on-failure",
+        "--output-junit",
+        "/tmp/kernels-refresh-20260907/A-gpu/native.xml"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "/tmp/kernels-qualification-env/bin/python",
+        "qualification.py",
+        "check",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/gpu-check.json"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "compute-sanitizer",
+        "--tool",
+        "memcheck",
+        "--error-exitcode",
+        "99",
+        "--target-processes",
+        "all",
+        "/tmp/kernels-qualification-env/bin/python",
+        "qualification.py",
+        "check",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/sanitizer-check.json"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "compute-sanitizer",
+        "--tool",
+        "memcheck",
+        "--error-exitcode",
+        "99",
+        "--target-processes",
+        "all",
+        "build/gemm_bench",
+        "--m",
+        "129",
+        "--n",
+        "257",
+        "--k",
+        "65",
+        "--dtype",
+        "fp16",
+        "--impl",
+        "ptx_mma_splitk",
+        "--warmup",
+        "0",
+        "--samples",
+        "1",
+        "--measurement-seconds",
+        "0"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "/tmp/kernels-qualification-env/bin/python",
+        "qualification.py",
+        "bench",
+        "--gate",
+        "/tmp/kernels-refresh-20260907/A-gpu/gpu-check.json",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/benchmark.json",
+        "--samples",
+        "31"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "/tmp/kernels-qualification-env/bin/python",
+        "native_suite.py",
+        "--gate",
+        "/tmp/kernels-refresh-20260907/A-gpu/gpu-check.json",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/native-benchmark.json"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "bash",
+        "scripts/setup_cute.sh"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "/tmp/kernels-cute-env/bin/python",
+        "cute_qualification.py",
+        "check",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/cute-check.json"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "compute-sanitizer",
+        "--tool",
+        "memcheck",
+        "--error-exitcode",
+        "99",
+        "--target-processes",
+        "all",
+        "/tmp/kernels-cute-env/bin/python",
+        "cute_qualification.py",
+        "check",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/cute-sanitizer-check.json"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "/tmp/kernels-cute-env/bin/python",
+        "cute_qualification.py",
+        "bench",
+        "--gate",
+        "/tmp/kernels-refresh-20260907/A-gpu/cute-check.json",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/cute-benchmark.json",
+        "--samples",
+        "31"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--force-overwrite=true",
+        "-o",
+        "/tmp/kernels-refresh-20260907/A-gpu/profile-decode",
+        "build/gemm_bench",
+        "--m",
+        "8",
+        "--n",
+        "4096",
+        "--k",
+        "4096",
+        "--dtype",
+        "fp16",
+        "--impl",
+        "ptx_mma_splitk",
+        "--warmup",
+        "0",
+        "--samples",
+        "1",
+        "--measurement-seconds",
+        "0",
+        "--min-sample-ms",
+        "0"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "nsys",
+        "stats",
+        "--report",
+        "cuda_gpu_kern_sum,cuda_gpu_mem_time_sum",
+        "--format",
+        "csv",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/profile-decode",
+        "/tmp/kernels-refresh-20260907/A-gpu/profile-decode.nsys-rep"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "nsys",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "--cpuctxsw=none",
+        "--force-overwrite=true",
+        "-o",
+        "/tmp/kernels-refresh-20260907/A-gpu/profile-tail",
+        "build/gemm_bench",
+        "--m",
+        "17",
+        "--n",
+        "257",
+        "--k",
+        "131",
+        "--dtype",
+        "fp16",
+        "--impl",
+        "ptx_mma_splitk",
+        "--warmup",
+        "0",
+        "--samples",
+        "1",
+        "--measurement-seconds",
+        "0",
+        "--min-sample-ms",
+        "0"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "argv": [
+        "nsys",
+        "stats",
+        "--report",
+        "cuda_gpu_kern_sum,cuda_gpu_mem_time_sum",
+        "--format",
+        "csv",
+        "--output",
+        "/tmp/kernels-refresh-20260907/A-gpu/profile-tail",
+        "/tmp/kernels-refresh-20260907/A-gpu/profile-tail.nsys-rep"
+      ],
+      "cwd": "/home/postedism/Desktop/kernal libraries/A-gemm-lab-qualification",
+      "returncode": 0,
+      "status": "passed"
+    }
+  ],
+  "claim_boundaries": [
+    "AI-assisted personal qualification tooling, not upstream patch authorship",
+    "New source is local/uncommitted; baseline commit links only for unchanged files",
+    "No production, cloud, multi-GPU or cross-architecture qualification",
+    "Timings remeasure existing algorithms; no optimization credited to this runner change",
+    "16 shared runner scenarios are repeated per independent repo, not 64 distinct scenarios",
+    "Supervisor SIGKILL, setsid escape, noncooperating jobs and kernel D-state waits are outside process-group guarantees"
+  ],
+  "artifacts": {
+    "benchmark.json": "43190aa743ad6aa48f2d2456138ffad79d4757c175f057cb6f4399307b47dda3",
+    "benchmark.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cpu-tests.log": "f32241fbe8359a41820ecd07c8e785c9f7b30adc18627b84c3b3d9088f5ebe97",
+    "cpu.xml": "09994c05a25703fba2d524ba2344f5c2dd5d725c7ebb0c55ca0eea19361876ca",
+    "cute-benchmark.json": "74a8d3d045de23af60665357f3f4e80deefa97c49d8c81cadf9c5763b163c16e",
+    "cute-benchmark.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cute-check.json": "144fa392af12c3dda7bed03c61298d2fbedfe17456a0b9d9389a4a7c287eef99",
+    "cute-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "cute-memcheck.log": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+    "cute-sanitizer-check.json": "72d63e621d1f47c8864e89e946b7638528eb468f5bd9066ede08543918121908",
+    "cute-source.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "execution.json": "23f0a9900e78687428816021f34c0e591c974561a25dc7be2bc18df082fcdd46",
+    "gpu-check.json": "e558b3d9ccebe9cfbca2eedb9f152a303cef8349208be0d41df3f1a9c23033ac",
+    "gpu-check.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu-memcheck.log": "a9d061cee538182f762e132abeea7bac7bddb844338f25751bbbb043f242c425",
+    "native-benchmark.json": "62ce93ca591b08fe7dadcab6aa710e6b635e6849c404632e41e8d7319b4f0375",
+    "native-benchmark.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native-build.log": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "native-configure.log": "5b955d44a62b39a5fc9c331b9743e7fa2a7b5ffdc5c8edb9978003afcebffa0a",
+    "native-memcheck.log": "7f216d0ee55e44bdfe7522d78f94be146da7ff3cb3585111ff7d71e7650618f5",
+    "native-tests.log": "1a72660ccddbfdd0d23b5cebbd795e6c44e1e7e5750595043400434e2b1c238d",
+    "native.xml": "c3ae536fe366e55974504b8f6053e65e954396e0572c299244881f571f170cfb",
+    "profile-decode-stats.log": "596fcda5dd8c8d58bd09bfc098c0f2822f6b79224a80837980a66ec5118f28f8",
+    "profile-decode.log": "69834d98022a9c1ec0a4773f3e0e79dfa2243d13d59a09d564753a466e75a792",
+    "profile-decode_cuda_gpu_kern_sum.csv": "c5d8dd000e2f03b31f04d9b8b0daccb81e812edfbdacafdf48739dfdf961e3eb",
+    "profile-decode_cuda_gpu_mem_time_sum.csv": "e6310d670bc12db9e6e3d4088787ae189dad64bf501d83e5ef25dc8ca4e29c40",
+    "profile-tail-stats.log": "e1d5f04bcf5a5095bd393cc7583ebefa07db7893d0df49b2272752e34e70a059",
+    "profile-tail.log": "7a1feefb4909a9615249fda66e4a8c2bf8817f0071750fa3250f9efb55c31904",
+    "profile-tail_cuda_gpu_kern_sum.csv": "ae1d221181856b4fa4e0fa8f2562e7a21a4773dfc8100bf3aeb764ecd2841d10",
+    "profile-tail_cuda_gpu_mem_time_sum.csv": "b31d6d396f26cf803d895259364f3cb0df992a7f69f1969f8b4a8ecd35f5147a",
+    "sanitizer-check.json": "795dd46130c74df5921ea3de8fca1767d63decd6b0e4a25bc65a132131f5d6f7",
+    "timeout-baseline.json": "5f8bc2d5c65d4475331edea8d2e2859d4befaae1662230d348872e81c8218c9e"
+  }
+}
