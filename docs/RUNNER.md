@@ -58,7 +58,6 @@ remain available for inspection; retry with a new name.
 - The initial sandboxed B ASan/UBSan run encountered LeakSanitizer's ptrace
   restriction; the failure is retained separately from unsandboxed validation.
 
-See `tests/test_execution.py` for real process/failure tests and the portfolio
-market review for the dependency-retention decision. Existing CI's pytest
+See `tests/test_execution.py` for real process/failure tests. Existing CI's pytest
 invocation automatically includes these tests; local execution is not a new
 hosted GitHub Actions result.

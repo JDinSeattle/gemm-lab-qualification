@@ -39,7 +39,7 @@ flowchart LR
   P --> D[Documented dispatch decision]
 ```
 
-Read the [contract](docs/contract.md), [registered hypotheses](docs/hypotheses.md), [results](docs/RESULTS.md), and [interview evidence](docs/INTERVIEW.md). Hardware counters are restricted on this host; the report distinguishes actual CUDA timeline evidence from unconfirmed occupancy/bandwidth hypotheses. No serving-scale or cross-architecture performance claim is made.
+Read the [contract](docs/contract.md), [registered hypotheses](docs/hypotheses.md), and [results](docs/RESULTS.md). Hardware counters are restricted on this host; the report distinguishes actual CUDA timeline evidence from unconfirmed occupancy/bandwidth hypotheses. No serving-scale or cross-architecture performance claim is made.
 
 License: MIT for this lab; inherited source attribution is in [provenance](manifests/provenance.json) and [upstream license](LICENSE.upstream). CUTLASS is downloaded separately under its own license. Historical performance records are not reused as current evidence.
 
@@ -48,8 +48,7 @@ License: MIT for this lab; inherited source attribution is in [provenance](manif
 The reproduction driver now bounds and cleans child process groups, reserves
 output directories atomically, and serializes cooperating same-user GPU runs.
 Structured failure receipts and 16 local process/file behavior tests cover the
-new lifecycle. See [runner contract and limits](docs/RUNNER.md) and
-[dated market/dependency review](docs/MARKET_REVIEW_2026-09-07.md).
+new lifecycle. See [runner contract and limits](docs/RUNNER.md).
 
 New code is local and uncommitted; the badge above describes hosted baseline CI.
 Historical performance reports remain tied to their original source snapshots.

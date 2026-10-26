@@ -2,9 +2,9 @@
 
 A single-GPU numerical qualification lab for FP16 GEMM and bias+SiLU fragments, with independent CPU references, explicit unsupported-layout fallbacks, paired timing, and isolated experiment ownership.
 
-## Confirmed qualification results
+## Results
 
-These are the user-confirmed results from a separate cloud test run, recorded in the experience bank. The device, workload, timing round, and counting boundaries below remain part of each result. They are distinct from the CPU checks performed in this checkout; cloud-hosted testing does not imply production deployment.
+These results come from a separate cloud test run. The device, workload, timing round, and counting boundaries below remain part of each result. They are distinct from the CPU checks performed in this checkout; cloud-hosted testing does not imply production deployment.
 
 - Qualified FP16 GEMM and bias+SiLU linear fragments on a single RTX 4090 24 GB (sm_89, CUDA 13.2, Python 3.13, torch 2.13.0, Triton 3.7.1, CuTe DSL 4.6.1) across M=1/8/32/128 with N=K=4096, seed=7 and uniform inputs in [-0.5,0.5], running correctness and sanitizer checks before 20 warmups and 31 randomized AB/BA CUDA-event pairs with data resident on GPU; the 76 GPU comparison records and 86 native CUDA tests are retained together with the slower paths and fallbacks.
 
@@ -54,4 +54,4 @@ Historical 76 GPU records stay separate from the eight new boundary probes and t
 
 - This is a local single-GPU lab on synthetic inputs: the 8 new boundary probes are not mixed into the historical 76 records, and no cloud, production or whole-model performance claim is made.
 
-The [previous README](README.historical.md) preserves earlier setup details, design discussion, and historical measurements. Its older counts, splits, versions, and timing cohorts must not be mixed with the confirmed round above. [Result provenance](docs/experience-bank-results.json) retains the confirmed bullet text; [checkout validation](docs/checkout-validation.md) records what was actually rerun here.
+The [previous README](README.historical.md) preserves earlier setup details, design discussion, and historical measurements. Its older counts, splits, versions, and timing cohorts must not be mixed with the cloud results above. [Checkout validation](docs/checkout-validation.md) records what was actually rerun here.

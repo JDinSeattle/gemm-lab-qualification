@@ -1,6 +1,6 @@
 # Checkout validation
 
-This local validation is separate from the user-confirmed cloud results in the README.
+This local validation is separate from the cloud results in the README.
 
 58 CPU tests passed, including independent scalar-reference corruption detection.
 
