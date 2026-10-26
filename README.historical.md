@@ -1,6 +1,6 @@
 # GEMM Lab Qualification
 
-[![CPU contracts](https://github.com/JDinSeattle/gemm-lab-qualification/actions/workflows/ci.yml/badge.svg)](https://github.com/JDinSeattle/gemm-lab-qualification/actions/workflows/ci.yml)
+[![CPU contracts](https://github.com/simon-jd/gemm-lab-qualification/actions/workflows/ci.yml/badge.svg)](https://github.com/simon-jd/gemm-lab-qualification/actions/workflows/ci.yml)
 
 A reproducible GPU performance-engineering study of small-batch linear projections: numerical boundaries, native build qualification, measurement provenance, and whether kernel behavior survives model-fragment integration.
 
